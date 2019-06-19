@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--My Collection View Controller-->
         <scene sceneID="pEu-8V-fYu">
             <objects>
-                <collectionViewController id="Voo-Gc-6f1" sceneMemberID="viewController">
+                <collectionViewController id="Voo-Gc-6f1" customClass="MyCollectionViewController" customModule="SomeNewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="TLD-3a-ozk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UuD-VX-jpG">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="UuD-VX-jpG" customClass="MyCollectionViewCell" customModule="SomeNewCollectionView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xQW-7w-qF9">
@@ -39,6 +39,9 @@
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="200" height="200"/>
+                                <connections>
+                                    <outlet property="newLabel" destination="NmZ-Of-3Os" id="1Ja-wF-NVE"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
